@@ -1,0 +1,57 @@
+<html>
+    <head>
+    <title>Erstes-JavaScript-Programm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    
+    <script>
+        "use strict";
+    function fPrüfziffer () {
+        var input= document.getElementById("1").value;
+        var a=[1,3,1,3,1,3,1,3,1,3,1,3];
+        var i=0;
+        var Summe ;
+        var Ergebnis = 0;
+        var Ausgabe="";
+        var Prüfziffer;
+        var vPruefziffer;
+        var text;
+        
+        while (i<=11){
+            Summe=a[i]*input[i];
+            Ergebnis = Ergebnis + Summe;
+          
+            i++
+        }    
+        Prüfziffer=10-(Ergebnis%10);
+				
+				if(vPruefziffer==10){
+				
+					vPruefziffer=0;
+				
+				}
+        if (Prüfziffer==input[12]) {text="Korrekt"}     
+        else {text="Falsch"}  
+        Ausgabe=Ausgabe + text;
+			 document.getElementById("Ausgabe").innerHTML = Ausgabe;	
+				
+				}
+				
+
+        
+        
+        
+    </script>
+
+
+<body>
+    <h1>Prüfziffer berechnen</h1>
+    <input id="1" type="text" value="1">
+     </br>
+
+    <button onClick="fPrüfziffer ();"> Prüfen </button>
+
+    <div id="Ausgabe"></div>
+</body>
+
+</html>
